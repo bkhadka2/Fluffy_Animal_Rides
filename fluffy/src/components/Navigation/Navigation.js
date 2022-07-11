@@ -6,13 +6,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navigation = () => {
   return (
-    <nav className={classes.navBar}>
-      <li className={classes.leftAlign}>
+    <nav className={classes.navigation__main}>
+      <li>
         <a href="/">
           <img src={Fluffy} alt="dogImage" className={classes.dogImage} />
         </a>
       </li>
-      <div className={classes.mainNav}>
+      <div className={classes.navigation__centered}>
         <li>
           <a href="/">Home</a>
         </li>
@@ -32,7 +32,7 @@ const Navigation = () => {
           </a>
         </li>
       </div>
-      <div className={classes.menu}>
+      <div className={classes.navigation__hamburger}>
         <GiHamburgerMenu />
       </div>
     </nav>

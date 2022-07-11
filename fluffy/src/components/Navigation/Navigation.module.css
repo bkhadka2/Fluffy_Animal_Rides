@@ -1,12 +1,12 @@
-.navBar {
+.navigation__main {
   display: flex;
   list-style: none;
   /* border: 3px solid red; */
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-.mainNav {
+.navigation__centered {
   /* border: 3px solid green; */
   display: flex;
   margin: auto;
@@ -32,20 +32,24 @@ a:visited {
   margin-right: 1rem;
 }
 
-.menu {
+.navigation__hamburger {
   display: none;
 }
 
-@media screen and (max-width: 1430px) {
-  .mainNav {
+@media screen and (max-width: 1300px) {
+  .navigation__centered {
     display: none;
   }
 
-  .menu {
+  .navigation__hamburger {
     display: flex;
-    /* border: 3px solid green; */
     margin-left: auto;
     font-size: 6rem;
     margin-right: 4rem;
   }
+
+  /* .mainNav {
+    flex-direction: column;
+    gap: 2rem;
+  } */
 }
