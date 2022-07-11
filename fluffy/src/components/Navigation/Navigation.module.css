@@ -1,0 +1,51 @@
+.navBar {
+  display: flex;
+  list-style: none;
+  /* border: 3px solid red; */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mainNav {
+  /* border: 3px solid green; */
+  display: flex;
+  margin: auto;
+  gap: 20rem;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 2.2rem;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.dogImage {
+  height: 10rem;
+  margin-right: 1rem;
+}
+
+.menu {
+  display: none;
+}
+
+@media screen and (max-width: 1430px) {
+  .mainNav {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    /* border: 3px solid green; */
+    margin-left: auto;
+    font-size: 6rem;
+    margin-right: 4rem;
+  }
+}
