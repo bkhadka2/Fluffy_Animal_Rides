@@ -1,14 +1,12 @@
-.navigation__main {
+.navigation__elements {
   display: flex;
   list-style: none;
-  /* border: 3px solid red; */
   flex-wrap: nowrap;
   align-items: center;
   margin-bottom: 4rem;
 }
 
-.navigation__centered {
-  /* border: 3px solid green; */
+.navigation__elements--centered {
   display: flex;
   margin: auto;
   gap: 10rem;
@@ -32,13 +30,16 @@ a:hover {
   color: grey;
 }
 
-.fluffy {
+.navigation__logo {
   height: 15rem;
-  /* border: 2px solid red; */
 }
 
 .navigation__hamburger {
   display: none;
+}
+
+.navigation__image {
+  background-image: url("../assets/sky.jpg");
 }
 
 @media screen and (max-width: 1200px) {
@@ -52,15 +53,5 @@ a:hover {
     font-size: 6rem;
     margin-right: 4rem;
   }
-}
-
-.main__cotton {
-  width: 65px;
-  /* border: 2px solid red; */
-}
-
-.sky {
-  /* border: 3px solid green; */
-  background-image: url("../assets/sky.jpg");
 }
 

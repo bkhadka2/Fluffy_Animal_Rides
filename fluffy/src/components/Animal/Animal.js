@@ -3,11 +3,11 @@ import groupAnimal from "../assets/animal.jpg";
 
 const Animal = () => {
   return (
-    <div className={classes.div__mainImage}>
+    <div className={classes.main__imageContainer}>
       <img
         src={groupAnimal}
         alt="group of animal"
-        className={classes.main__animal}
+        className={classes["main__imageContainer--animal"]}
       />
     </div>
   );

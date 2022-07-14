@@ -5,14 +5,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navigation = () => {
   return (
-    <div className={classes.sky}>
-      <nav className={classes.navigation__main}>
+    <div className={classes.navigation__image}>
+      <nav className={classes.navigation__elements}>
         <li>
           <a href="/">
-            <img src={Fluffy} alt="fluffy logo" className={classes.fluffy} />
+            <img src={Fluffy} alt="fluffy logo" className={classes.navigation__logo} />
           </a>
         </li>
-        <div className={classes.navigation__centered}>
+        <div className={classes["navigation__elements--centered"]}>
           <li>
             <a href="/">Home</a>
           </li>
