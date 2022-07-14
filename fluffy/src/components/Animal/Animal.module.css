@@ -1,0 +1,19 @@
+.main__animal {
+  width: 80%;
+  margin: 2rem auto;
+  /* border: 3px solid green; */
+  display: block;
+  position: relative;
+}
+
+.div__mainImage {
+  /* border: 3px solid green; */
+  margin-bottom: 8rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .main__animal {
+    margin-top: 10rem;
+    width: 95%;
+  }
+}

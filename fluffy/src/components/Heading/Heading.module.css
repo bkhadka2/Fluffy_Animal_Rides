@@ -1,0 +1,33 @@
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 10rem;
+  margin-bottom: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  animation: fromLeftToRight 1s ease-out;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  text-shadow: 0 10px 8px rgb(0, 0, 0, 0.2);
+}
+
+hr {
+  animation: fromLeftToRight 1s ease-out;
+}
+
+@keyframes fromLeftToRight {
+  0% {
+    transform: translateX(-6rem);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(0.2rem);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+}

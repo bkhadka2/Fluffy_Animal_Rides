@@ -1,0 +1,22 @@
+.button {
+  display: inline-block;
+  background-color: green;
+  padding: 1rem 2rem;
+  border: 0;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.button:hover {
+  background-color: rgb(89, 182, 89);
+}
+
+@media screen and (max-width: 600px) {
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

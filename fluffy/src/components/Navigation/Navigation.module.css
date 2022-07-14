@@ -2,23 +2,24 @@
   display: flex;
   list-style: none;
   /* border: 3px solid red; */
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
+  margin-bottom: 4rem;
 }
 
 .navigation__centered {
   /* border: 3px solid green; */
   display: flex;
   margin: auto;
-  gap: 20rem;
-  flex-wrap: wrap;
+  gap: 10rem;
+  flex-wrap: nowrap;
 }
 
 a {
   text-decoration: none;
-  font-family: "Lato", sans-serif;
   letter-spacing: 0.2rem;
   font-size: 2.2rem;
+  font-family: "Lato", sans-serif;
 }
 
 a:link,
@@ -27,16 +28,20 @@ a:visited {
   color: black;
 }
 
-.dogImage {
-  height: 10rem;
-  margin-right: 1rem;
+a:hover {
+  color: grey;
+}
+
+.fluffy {
+  height: 15rem;
+  /* border: 2px solid red; */
 }
 
 .navigation__hamburger {
   display: none;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
   .navigation__centered {
     display: none;
   }
@@ -47,9 +52,15 @@ a:visited {
     font-size: 6rem;
     margin-right: 4rem;
   }
-
-  /* .mainNav {
-    flex-direction: column;
-    gap: 2rem;
-  } */
 }
+
+.main__cotton {
+  width: 65px;
+  /* border: 2px solid red; */
+}
+
+.sky {
+  /* border: 3px solid green; */
+  background-image: url("../assets/sky.jpg");
+}
+
