@@ -1,17 +1,28 @@
-.main__imageContainer--animal{
-  width: 80%;
-  margin: 2rem auto;
+.main__imageContainer--animal {
+  width: 85%;
+  margin-top: 28vh;
+  margin-left: 50vw;
+  transform: translate(-50%, -10%);
   display: block;
-  position: relative;
 }
 
-.main__imageContainer {
-  margin-bottom: 8rem;
-}
-
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
   .main__imageContainer--animal {
-    margin-top: 10rem;
     width: 95%;
+    margin-top: 30vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main__imageContainer--animal {
+    width: 95%;
+    margin-top: 20vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main__imageContainer--animal {
+    width: 95%;
+    margin-top: 30vh;
   }
 }

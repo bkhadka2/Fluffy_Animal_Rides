@@ -2,37 +2,89 @@ import React from "react";
 import classes from "./Navigation.module.css";
 import Fluffy from "../assets/fluffy.png";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-scroll";
 
 const Navigation = () => {
   return (
     <div className={classes.navigation__image}>
       <nav className={classes.navigation__elements}>
         <li>
-          <a href="/">
-            <img src={Fluffy} alt="fluffy logo" className={classes.navigation__logo} />
-          </a>
+          <Link
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            className={classes["navigation__link"]}
+          >
+            <img
+              src={Fluffy}
+              alt="fluffy logo"
+              className={classes.navigation__logo}
+            />
+          </Link>
         </li>
         <div className={classes["navigation__elements--centered"]}>
           <li>
-            <a href="/">Home</a>
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-280}
+              duration={500}
+              className={classes["navigation__link"]}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <a
-              href="https://forms.gle/ETYMAwPLMStsh6Ts8"
+            {/* <Link
+              to="https://forms.gle/ETYMAwPLMStsh6Ts8"
               target="_blank"
               rel="noopener noreferrer"
+              className={classes["navigation__link"]}
+            >
+              Cotton Candy
+            </Link> */}
+            <a
+              href="https://drive.google.com/file/d/1DUHTze7jlZiYVcFMZqE_Hgmm1DOJ1b3C/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes["navigation__link"]}
             >
               Cotton Candy
             </a>
           </li>
           <li>
-            <a href="/">Services</a>
+            <Link
+              to="services"
+              activeClass={classes.active}
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={500}
+              className={classes["navigation__link"]}
+            >
+              Services
+            </Link>
           </li>
           <li>
-            <a href="/">About Us</a>
+            <Link
+              to="about"
+              activeClass={classes.active}
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={500}
+              className={classes["navigation__link"]}
+            >
+              About Us
+            </Link>
           </li>
           <li>
-            <a href="/">Contact</a>
+            <Link to="/" className={classes["navigation__link"]}>
+              Contact
+            </Link>
           </li>
         </div>
         <div className={classes.navigation__hamburger}>

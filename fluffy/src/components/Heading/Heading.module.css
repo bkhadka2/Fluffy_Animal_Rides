@@ -1,9 +1,10 @@
 h1 {
   text-align: center;
   font-size: 3rem;
-  margin-top: 10rem;
+  margin-top: 7vh;
   margin-bottom: 1rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   animation: fromLeftToRight 1s ease-out;
   text-transform: uppercase;
   letter-spacing: 0.4rem;
@@ -12,6 +13,7 @@ h1 {
 
 hr {
   animation: fromLeftToRight 1s ease-out;
+  border: 1px solid rgb(81, 81, 254);
 }
 
 @keyframes fromLeftToRight {

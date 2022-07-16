@@ -3,7 +3,7 @@ import groupAnimal from "../assets/animal.jpg";
 
 const Animal = () => {
   return (
-    <div className={classes.main__imageContainer}>
+    <div name="home">
       <img
         src={groupAnimal}
         alt="group of animal"
