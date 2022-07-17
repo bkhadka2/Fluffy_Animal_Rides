@@ -9,20 +9,12 @@ const Navigation = () => {
     <div className={classes.navigation__image}>
       <nav className={classes.navigation__elements}>
         <li>
-          <Link
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={500}
-            className={classes["navigation__link"]}
-          >
-            <img
-              src={Fluffy}
-              alt="fluffy logo"
-              className={classes.navigation__logo}
-            />
-          </Link>
+          <img
+            src={Fluffy}
+            alt="fluffy logo"
+            className={classes.navigation__logo}
+          />
+          {/* </Link> */}
         </li>
         <div className={classes["navigation__elements--centered"]}>
           <li>
@@ -38,16 +30,8 @@ const Navigation = () => {
             </Link>
           </li>
           <li>
-            {/* <Link
-              to="https://forms.gle/ETYMAwPLMStsh6Ts8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={classes["navigation__link"]}
-            >
-              Cotton Candy
-            </Link> */}
             <a
-              href="https://drive.google.com/file/d/1DUHTze7jlZiYVcFMZqE_Hgmm1DOJ1b3C/view?usp=sharing"
+              href="https://forms.gle/ETYMAwPLMStsh6Ts8"
               target="_blank"
               rel="noopener noreferrer"
               className={classes["navigation__link"]}
@@ -61,7 +45,7 @@ const Navigation = () => {
               activeClass={classes.active}
               spy={true}
               smooth={true}
-              offset={-200}
+              offset={-230}
               duration={500}
               className={classes["navigation__link"]}
             >
@@ -82,7 +66,15 @@ const Navigation = () => {
             </Link>
           </li>
           <li>
-            <Link to="/" className={classes["navigation__link"]}>
+            <Link
+              to="contact"
+              activeClass={classes.active}
+              spy={true}
+              smooth={true}
+              offset={-230}
+              duration={500}
+              className={classes["navigation__link"]}
+            >
               Contact
             </Link>
           </li>

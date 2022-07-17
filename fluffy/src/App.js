@@ -3,8 +3,9 @@ import Navigation from "./components/Navigation/Navigation";
 import Animal from "./components/Animal/Animal";
 import Service from "./components/Service/Service";
 import About from "./components/About/About";
-import EndDesign from "./components/EndDesign/EndDesign";
+// import EndDesign from "./components/EndDesign/EndDesign";
 import Footer from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Service />
         <section>
           <About />
+          <Contact />
         </section>
         <footer>
           <Footer />

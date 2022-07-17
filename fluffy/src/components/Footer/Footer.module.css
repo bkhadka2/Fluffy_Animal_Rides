@@ -1,5 +1,37 @@
 .footer {
   /* padding: 3rem 3rem; */
+  margin-top: 20rem;
   background-color: rgb(41, 39, 39);
-  height: 40vh;
+  height: 25vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__text {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid white;
+}
+
+.sec__text {
+  font-size: 2rem;
+}
+
+.sec__text--link {
+  text-decoration: none;
+  color: #2e8b57;
+  text-decoration: underline;
+}
+
+.sec__text:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    margin-top: 25rem;
+  } 
 }
