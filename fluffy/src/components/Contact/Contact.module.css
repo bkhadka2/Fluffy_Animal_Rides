@@ -98,7 +98,7 @@
 .media__icon {
   margin-top: 3rem;
   color: white;
-  font-size: 4rem;
+  font-size: 4rem !important;
 }
 
 @media screen and (max-width: 1050px) {
@@ -113,7 +113,7 @@
   }
 
   .media__icon {
-    font-size: 5rem;
+    font-size: 5rem !important;
   }
   .col1 {
     width: 100%;

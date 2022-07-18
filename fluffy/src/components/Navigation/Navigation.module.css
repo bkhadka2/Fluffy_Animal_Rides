@@ -5,6 +5,33 @@
   align-items: center;
 }
 
+.navigation__elements--small {
+  display: flex;
+  list-style: none;
+  flex-wrap: nowrap;
+  height: 100vh;
+}
+
+.navigation__elements--centered--small {
+  margin: 30rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  align-items: center;
+}
+
+.navigation__link--small {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  text-decoration: none;
+}
+
+.navigation__link--small:link,
+.navigation__link--small:visited {
+  text-decoration: none;
+  color: black;
+}
+
 .navigation__elements--centered {
   display: flex;
   margin: auto;
@@ -46,11 +73,13 @@
   display: none;
 }
 
-/* .mainContainer {
-  position: relative;
-  border: 3px solid green;
-
-} */
+.navigation__hamburger--small {
+  margin-top: 2.5rem;
+  display: flex;
+  margin-left: auto;
+  font-size: 5rem !important;
+  margin-right: 2rem;
+}
 
 .navigation__image {
   background-image: url("../assets/sky.jpg");
@@ -68,7 +97,18 @@
   .navigation__hamburger {
     display: flex;
     margin-left: auto;
-    font-size: 6rem;
+    font-size: 5rem;
     margin-right: 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navigation__link--small {
+    font-size: 2.2rem;
+    text-decoration: none;
+  }
+
+  .navigation__elements--centered--small {
+    margin: 18rem auto;
   }
 }

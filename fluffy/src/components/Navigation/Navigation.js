@@ -2,12 +2,26 @@ import React from "react";
 import classes from "./Navigation.module.css";
 import Fluffy from "../assets/fluffy.png";
 import { GiHamburgerMenu } from "react-icons/gi";
+import ClearIcon from "@material-ui/icons/Clear";
 import { Link } from "react-scroll";
+import { useState } from "react";
 
 const Navigation = () => {
+  const [ham, setHam] = useState(false);
+
+  const hamHandler = () => {
+    setHam((prevState) => !prevState);
+  };
+
   return (
     <div className={classes.navigation__image}>
-      <nav className={classes.navigation__elements}>
+      <nav
+        className={`${
+          !ham
+            ? classes["navigation__elements"]
+            : classes["navigation__elements--small"]
+        }`}
+      >
         <li>
           <img
             src={Fluffy}
@@ -16,7 +30,13 @@ const Navigation = () => {
           />
           {/* </Link> */}
         </li>
-        <div className={classes["navigation__elements--centered"]}>
+        <div
+          className={`${
+            !ham
+              ? classes["navigation__elements--centered"]
+              : classes["navigation__elements--centered--small"]
+          }`}
+        >
           <li>
             <Link
               to="home"
@@ -24,7 +44,12 @@ const Navigation = () => {
               smooth={true}
               offset={-280}
               duration={500}
-              className={classes["navigation__link"]}
+              className={`${
+                !ham
+                  ? classes["navigation__link"]
+                  : classes["navigation__link--small"]
+              }`}
+              onClick={hamHandler}
             >
               Home
             </Link>
@@ -34,7 +59,12 @@ const Navigation = () => {
               href="https://forms.gle/ETYMAwPLMStsh6Ts8"
               target="_blank"
               rel="noopener noreferrer"
-              className={classes["navigation__link"]}
+              className={`${
+                !ham
+                  ? classes["navigation__link"]
+                  : classes["navigation__link--small"]
+              }`}
+              onClick={hamHandler}
             >
               Cotton Candy
             </a>
@@ -47,7 +77,12 @@ const Navigation = () => {
               smooth={true}
               offset={-230}
               duration={500}
-              className={classes["navigation__link"]}
+              className={`${
+                !ham
+                  ? classes["navigation__link"]
+                  : classes["navigation__link--small"]
+              }`}
+              onClick={hamHandler}
             >
               Services
             </Link>
@@ -60,7 +95,12 @@ const Navigation = () => {
               smooth={true}
               offset={-200}
               duration={500}
-              className={classes["navigation__link"]}
+              className={`${
+                !ham
+                  ? classes["navigation__link"]
+                  : classes["navigation__link--small"]
+              }`}
+              onClick={hamHandler}
             >
               About Us
             </Link>
@@ -73,14 +113,35 @@ const Navigation = () => {
               smooth={true}
               offset={-230}
               duration={500}
-              className={classes["navigation__link"]}
+              className={`${
+                !ham
+                  ? classes["navigation__link"]
+                  : classes["navigation__link--small"]
+              }`}
+              onClick={hamHandler}
             >
               Contact
             </Link>
           </li>
         </div>
-        <div className={classes.navigation__hamburger}>
-          <GiHamburgerMenu />
+        <div
+          className={`${
+            !ham
+              ? classes.navigation__hamburger
+              : classes["navigation__hamburger--small"]
+          }`}
+        >
+          {!ham && <GiHamburgerMenu onClick={hamHandler} />}
+          {ham && (
+            <ClearIcon
+              onClick={hamHandler}
+              className={`${
+                !ham
+                  ? classes.navigation__hamburger
+                  : classes["navigation__hamburger--small"]
+              }`}
+            />
+          )}
         </div>
       </nav>
     </div>
