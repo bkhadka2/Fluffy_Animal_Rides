@@ -8,6 +8,7 @@ import { useState } from "react";
 
 const Navigation = () => {
   const [ham, setHam] = useState(false);
+  // const [smallDevice, setSmallDevice] = useState(false);
 
   const hamHandler = () => {
     setHam((prevState) => !prevState);
@@ -23,12 +24,13 @@ const Navigation = () => {
         }`}
       >
         <li>
-          <img
-            src={Fluffy}
-            alt="fluffy logo"
-            className={classes.navigation__logo}
-          />
-          {/* </Link> */}
+          <a href="/">
+            <img
+              src={Fluffy}
+              alt="fluffy logo"
+              className={classes.navigation__logo}
+            />
+          </a>
         </li>
         <div
           className={`${
@@ -38,90 +40,144 @@ const Navigation = () => {
           }`}
         >
           <li>
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-280}
-              duration={500}
-              className={`${
-                !ham
-                  ? classes["navigation__link"]
-                  : classes["navigation__link--small"]
-              }`}
-              onClick={hamHandler}
-            >
-              Home
-            </Link>
+            {!ham && (
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-280}
+                duration={500}
+                className={classes["navigation__link"]}
+              >
+                Home
+              </Link>
+            )}
+
+            {ham && (
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-280}
+                duration={500}
+                onClick={hamHandler}
+                className={classes["navigation__link--small"]}
+              >
+                Home
+              </Link>
+            )}
           </li>
           <li>
-            <a
-              href="https://forms.gle/ETYMAwPLMStsh6Ts8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${
-                !ham
-                  ? classes["navigation__link"]
-                  : classes["navigation__link--small"]
-              }`}
-              onClick={hamHandler}
-            >
-              Cotton Candy
-            </a>
+            {!ham && (
+              <a
+                href="https://forms.gle/ETYMAwPLMStsh6Ts8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes["navigation__link"]}
+              >
+                Cotton Candy
+              </a>
+            )}
+
+            {ham && (
+              <a
+                href="https://forms.gle/ETYMAwPLMStsh6Ts8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={classes["navigation__link--small"]}
+                onClick={hamHandler}
+              >
+                Cotton Candy
+              </a>
+            )}
           </li>
           <li>
-            <Link
-              to="services"
-              activeClass={classes.active}
-              spy={true}
-              smooth={true}
-              offset={-230}
-              duration={500}
-              className={`${
-                !ham
-                  ? classes["navigation__link"]
-                  : classes["navigation__link--small"]
-              }`}
-              onClick={hamHandler}
-            >
-              Services
-            </Link>
+            {!ham && (
+              <Link
+                to="services"
+                activeClass={classes.active}
+                spy={true}
+                smooth={true}
+                offset={-230}
+                duration={500}
+                className={classes["navigation__link"]}
+              >
+                Services
+              </Link>
+            )}
+
+            {ham && (
+              <Link
+                to="services"
+                activeClass={classes.active}
+                spy={true}
+                smooth={true}
+                offset={-230}
+                duration={500}
+                className={classes["navigation__link--small"]}
+                onClick={hamHandler}
+              >
+                Services
+              </Link>
+            )}
           </li>
           <li>
-            <Link
-              to="about"
-              activeClass={classes.active}
-              spy={true}
-              smooth={true}
-              offset={-200}
-              duration={500}
-              className={`${
-                !ham
-                  ? classes["navigation__link"]
-                  : classes["navigation__link--small"]
-              }`}
-              onClick={hamHandler}
-            >
-              About Us
-            </Link>
+            {!ham && (
+              <Link
+                to="about"
+                activeClass={classes.active}
+                spy={true}
+                smooth={true}
+                offset={-200}
+                duration={500}
+                className={classes["navigation__link"]}
+              >
+                About Us
+              </Link>
+            )}
+            {ham && (
+              <Link
+                to="about"
+                activeClass={classes.active}
+                spy={true}
+                smooth={true}
+                offset={-200}
+                duration={500}
+                onClick={hamHandler}
+                className={classes["navigation__link--small"]}
+              >
+                About Us
+              </Link>
+            )}
           </li>
           <li>
-            <Link
-              to="contact"
-              activeClass={classes.active}
-              spy={true}
-              smooth={true}
-              offset={-230}
-              duration={500}
-              className={`${
-                !ham
-                  ? classes["navigation__link"]
-                  : classes["navigation__link--small"]
-              }`}
-              onClick={hamHandler}
-            >
-              Contact
-            </Link>
+            {!ham && (
+              <Link
+                to="contact"
+                activeClass={classes.active}
+                spy={true}
+                smooth={true}
+                offset={-230}
+                duration={500}
+                className={classes["navigation__link"]}
+              >
+                Contact
+              </Link>
+            )}
+            {ham && (
+              <Link
+                to="contact"
+                activeClass={classes.active}
+                spy={true}
+                smooth={true}
+                offset={-230}
+                duration={500}
+                className={classes["navigation__link--small"]}
+                onClick={hamHandler}
+              >
+                Contact
+              </Link>
+            )}
           </li>
         </div>
         <div
